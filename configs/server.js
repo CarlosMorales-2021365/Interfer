@@ -5,6 +5,7 @@ import cors from "cors"
 import helmet from "helmet"
 import morgan from "morgan"
 import { dbConnection } from "./mongo.js"
+import authRoutes from "../src/auth/auth.routes.js"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js"
 import User from "../src/user/user.model.js"
 import { hash } from "argon2"
@@ -16,6 +17,10 @@ const middelwares = (app) => {
     app.use(helmet())
     app.use(morgan("dev"))
     app.use(apiLimiter)
+}
+
+const routes = (app) =>{
+    app.use("/intefer/v1/auth", authRoutes)
 }
 
 const connectarDB = async () =>{
@@ -56,6 +61,7 @@ export const initServer = () => {
     try{
         middelwares(app)
         connectarDB()
+        routes(app)
         crearPrimerAdmin()
         app.listen(process.env.PORT)
         console.log(`Server running on a port  ${process.env.PORT}`)
