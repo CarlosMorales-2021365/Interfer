@@ -1,3 +1,4 @@
+import { timeStamp } from 'console';
 import Empresas from './empresa.model.js'
 import ExcelJS from 'exceljs'
 import fs from 'fs';
@@ -80,10 +81,11 @@ export const filtrarEmpresas = async (req, res) => {
         const empresas = await Empresas.find(filtro).sort(orden);
 
         const excel = await generarExcel(empresas);
-
+        const timeStamp = Date.now();
+        const nombreExcel = `empresas_${timeStamp}.xlsx`;
         const directorioDestino = path.join(__dirname, '..','..', 'public', 'uploads', 'Excel');
 
-        const archivoExcelPath = path.join(directorioDestino, 'empresas.xlsx');
+        const archivoExcelPath = path.join(directorioDestino, nombreExcel);
 
         await fs.promises.writeFile(archivoExcelPath, excel);
 
