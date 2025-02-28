@@ -43,3 +43,41 @@ export const updateEmpresa = async (req, res) =>{
         });
     }
 }
+
+export const filtrarEmpresas = async (req, res) => {
+    try {
+        const { trayectoria, categoria, ordenA_Z, ordenZ_A} = req.body;
+        let filtro = {};
+ 
+        if (categoria !== undefined){
+            filtro.categoria = categoria;
+        }
+        if (trayectoria !== undefined) {
+            filtro.trayectoria = {$eq: parseInt(trayectoria)};
+        }
+        let orden = {};
+ 
+        if (ordenA_Z) {
+            orden.name = 1;
+        } else if (ordenZ_A) {
+            orden.name = -1;
+        } else {
+            orden.name = 1;
+        }
+ 
+        const empresas = await Empresas.find(filtro).sort(orden);
+
+        res.status(200).json({
+            success: true,
+            message: "Empresas filtradas con éxito",
+            data: empresas
+        })
+ 
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "Error al obtener las empresas",
+            error: error.message
+        })
+    }
+}

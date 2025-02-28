@@ -22,3 +22,9 @@ export const updateEmpresaValidator = [
     validarCampos,
     handleErrors
 ]
+
+export const obtenerEmpresaValidator = [
+    validateJWT,
+    validarCampos,
+    handleErrors
+]
