@@ -22,3 +22,24 @@ export const createEmpresa = async (req, res) =>{
         });
     }
 }
+
+export const updateEmpresa = async (req, res) =>{
+    try{
+        const { id } = req.params;
+        const data = req.body;
+
+        const empresa = await Empresas.findByIdAndUpdate(id, data, {new: true});
+
+        res.status(200).json({
+            success: true,
+            msg: "Empresa actualizada",
+            empresa
+        })
+    }catch(err){
+        res.status(500).json({
+            success: false,
+            msg: "Error al actualizar la empresa",
+            error: err.message
+        });
+    }
+}
