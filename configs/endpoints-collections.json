@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "f0a771e4-6a5c-4889-9a62-de3bd4590b29",
+		"name": "Interfer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41867639"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "registrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Carlos André",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Morales Coy",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Cmorales",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "moralesc-21365@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Abc123**",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/Admin/Desktop/foto.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/intefer/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"intefer",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"Admin1@gmail.com\",\r\n    \"password\":\"abc123**\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/intefer/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"intefer",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "empresas",
+			"item": [
+				{
+					"name": "crear empresa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlNWZmNGNlOGNkNzI1M2Y5OTJiZGMiLCJpYXQiOjE3NDA3NTQxOTksImV4cCI6MTc0MDc1Nzc5OX0.pBbKjuawyobxFNk6Wsmr_4ppu7qrkP4mneNndyHKF44",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Macdonals\",\r\n    \"contacto\":\"Lopez Laynes\",\r\n    \"email\":\"Lopez@gmail.com\",\r\n    \"direccion\":\"15 calle 03-12 zona 1\",\r\n    \"fundacion\":\"1993\",\r\n    \"impacto\":\"calificacion de estrellas\",\r\n    \"categoria\":\"Mediana empresa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/intefer/v1/empresas/createEmpresas",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"intefer",
+								"v1",
+								"empresas",
+								"createEmpresas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar empresa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlNWZmNGNlOGNkNzI1M2Y5OTJiZGMiLCJpYXQiOjE3NDA3MDQ0NTIsImV4cCI6MTc0MDcwODA1Mn0.te-4YKrNxztScTT3MOSaD3grbfjBvwQj2mTCNUjLSXc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"TechTerrans\",\r\n    \"contacto\":\"Devin Orlando\",\r\n    \"email\":\"Devin@gmail.com\",\r\n    \"direccion\":\"13 avenida zona 4\",\r\n    \"fundacion\":\"2015\",\r\n    \"impacto\":\"calificacion de estrellas\",\r\n    \"categoria\":\"Micro empresa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/intefer/v1/empresas/updateEmpresa/67c0a2b006940b3ec3404cf7",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"intefer",
+								"v1",
+								"empresas",
+								"updateEmpresa",
+								"67c0a2b006940b3ec3404cf7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar empresas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JlNWZmNGNlOGNkNzI1M2Y5OTJiZGMiLCJpYXQiOjE3NDA3ODY1ODAsImV4cCI6MTc0MDc5MDE4MH0.6C1dWNNnYapEI6dGhN4BsLn1VfOrVZ7nmNGINksGg2w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"ordenZ_A\":\"true\"\r\n    \r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/intefer/v1/empresas/obtenerEmpresas",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"intefer",
+								"v1",
+								"empresas",
+								"obtenerEmpresas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

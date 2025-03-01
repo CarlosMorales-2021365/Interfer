@@ -10,6 +10,7 @@ import empresaRoutes from "../src/empresa/empresa.routes.js"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js"
 import User from "../src/user/user.model.js"
 import { hash } from "argon2"
+import { swaggerDocs, swaggerUi} from "./swagger.js";
 
 const middelwares = (app) => {
     app.use(express.urlencoded({extended: false}))
@@ -23,6 +24,7 @@ const middelwares = (app) => {
 const routes = (app) =>{
     app.use("/intefer/v1/auth", authRoutes)
     app.use("/intefer/v1/empresas", empresaRoutes)
+    app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 }
 
 const connectarDB = async () =>{
