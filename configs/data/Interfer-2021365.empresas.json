@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "67c09fe106940b3ec3404cf3"
+  },
+  "name": "Pollo Campero",
+  "contacto": "Rene Garcia",
+  "email": "Rene@gmail.com",
+  "direccion": "28 calle 15-72 zona 2",
+  "fundacion": "1993",
+  "impacto": "calificacion de estrellas",
+  "trayectoria": "33",
+  "categoria": "Gran empresa",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-27T17:24:49.084Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-27T17:24:49.084Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c0a2b006940b3ec3404cf7"
+  },
+  "name": "TechTerrans",
+  "contacto": "Devin Orlando",
+  "email": "Devin@gmail.com",
+  "direccion": "13 avenida zona 4",
+  "fundacion": "2015",
+  "impacto": "calificacion de estrellas",
+  "trayectoria": "11",
+  "categoria": "Micro empresa",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-27T17:36:48.655Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T01:04:23.856Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c113e06dba2e92907edbd5"
+  },
+  "name": "Miselanias Maria",
+  "contacto": "Ramiro Morales",
+  "email": "Ascesor99@gmail.com",
+  "direccion": "15 calle 02-76 zona 3",
+  "fundacion": "2015",
+  "impacto": "calificacion de estrellas",
+  "trayectoria": "11",
+  "categoria": "Micro empresa",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-28T01:39:44.831Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T01:39:44.831Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1cd22290c656ef0e70337"
+  },
+  "name": "Claro",
+  "contacto": "Erick Socop",
+  "email": "Socoop@gmail.com",
+  "direccion": "28 calle 25-72 zona 3",
+  "fundacion": "1994",
+  "impacto": "calificacion de estrellas",
+  "trayectoria": "32",
+  "categoria": "Gran empresa",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-28T14:50:10.596Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T14:50:10.596Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1cd70290c656ef0e7033b"
+  },
+  "name": "Transdoc",
+  "contacto": "Juan Carlos Morales",
+  "email": "Acesro1@gmail.com",
+  "direccion": "15 calle 05-12 zona 1",
+  "fundacion": "2000",
+  "impacto": "calificacion de estrellas",
+  "trayectoria": "26",
+  "categoria": "Mediana empresa",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-28T14:51:28.775Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T14:51:28.775Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1cdd8290c656ef0e7033f"
+  },
+  "name": "Macdonals",
+  "contacto": "Lopez Laynes",
+  "email": "Lopez@gmail.com",
+  "direccion": "15 calle 03-12 zona 1",
+  "fundacion": "1993",
+  "impacto": "calificacion de estrellas",
+  "trayectoria": "33",
+  "categoria": "Mediana empresa",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-28T14:53:12.374Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T14:53:12.374Z"
+  }
+}]

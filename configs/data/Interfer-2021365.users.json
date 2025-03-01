@@ -1,0 +1,75 @@
+[{
+  "_id": {
+    "$oid": "67be5ff4ce8cd7253f992bdc"
+  },
+  "name": "Admin1",
+  "surname": "Admin1",
+  "username": "admin1",
+  "email": "Admin1@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$tFvtmkJQM0jXIiO8KaHwtg$z0GGnij92Yun5ZfStCoNHEg2iEdlRFuwzQtyAJfxMEk",
+  "role": "ADMIN_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-26T00:27:32.270Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-26T00:27:32.270Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67be6e4ea3fae54f5ca9e7e5"
+  },
+  "name": "Carlos André",
+  "surname": "Morales Coy",
+  "username": "Cmorales",
+  "email": "moralesc-21365@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$q+4USgr+2E3gAQDQsN2ocA$r/CJ/ozhRmkaNe9vxQP8NvGYBLZkVS7kBhiBac6gR/0",
+  "profilePicture": "foto-1740533326837.png",
+  "role": "ADMIN_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-26T01:28:46.957Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-26T01:28:46.957Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c25834d0753e9078940513"
+  },
+  "name": "Diego Efrain",
+  "surname": "Morales Cuin",
+  "username": "Dmorales",
+  "email": "Dieguito@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$Gfzs2FR3ejjerg3/yBBqEw$0niFctxJJQZwRZF1/vx8mSS+aoHZS1cevR4WXdBUa/I",
+  "profilePicture": null,
+  "role": "ADMIN_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T00:43:32.638Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T00:43:32.638Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c2587bd0753e9078940517"
+  },
+  "name": "Brayan",
+  "surname": "Toyom",
+  "username": "Ttoyon",
+  "email": "Brayan@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$ipD1QKbfjPihsv99JFuF8w$ETIgOcHdaxeb4U3LhaQaaaPaDT+23SFYAC4ME3XZH0s",
+  "profilePicture": null,
+  "role": "ADMIN_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T00:44:43.204Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T00:44:43.204Z"
+  }
+}]
